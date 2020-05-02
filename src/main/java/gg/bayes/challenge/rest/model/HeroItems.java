@@ -1,9 +1,15 @@
 package gg.bayes.challenge.rest.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
+@Getter
+@Setter
+@RequiredArgsConstructor
 @Data
 public class HeroItems {
-    private String item;
-    private Long timestamp;
+    private final String item;
+    private final Long timestamp;
 }
