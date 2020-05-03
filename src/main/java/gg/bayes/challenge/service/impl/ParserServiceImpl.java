@@ -7,6 +7,7 @@ import gg.bayes.challenge.entity.HeroItems;
 import gg.bayes.challenge.entity.HeroKills;
 import gg.bayes.challenge.entity.HeroSpells;
 import gg.bayes.challenge.entity.OperationType;
+import gg.bayes.challenge.exception.UnexpectedLogEntryException;
 import gg.bayes.challenge.repository.HeroRepository;
 import gg.bayes.challenge.service.ParserService;
 import java.time.LocalTime;
@@ -44,8 +45,7 @@ public class ParserServiceImpl implements ParserService {
             case 10:
                 return columns10(strArray, matchId);
             default:
-                log.warn("unexpected log entry");
-                return null;
+                throw new UnexpectedLogEntryException("unexpected log entry");
         }
     }
 

@@ -60,7 +60,7 @@ public class MatchServiceImpl implements MatchService {
                 try {
                     Thread.sleep(250);
                 } catch (InterruptedException e) {
-                    log.info("Occurred InterruptedException.");
+                    log.warn("Occurred InterruptedException.");
                 }
             }
             return matchId;
